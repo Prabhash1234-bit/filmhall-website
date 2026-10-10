@@ -1,0 +1,226 @@
+/* ===== FilmHall design tokens =====================================
+   One brand, three surfaces. Colour lives in tokens and nowhere else.
+   Brand rule: Lotus is primary, white/red/black support it, green and
+   purple are semantic accents used sparingly. Mirrors the tokens in
+   odisha-filmhall-website/style.css. */
+:root {
+    /* primary - lotus */
+    --fh-lotus: #C21E56;
+    --fh-lotus-deep: #8E1440;
+    --fh-lotus-dark: #6B0F31;
+    --fh-lotus-tint: #FBE6EE;
+
+    /* supporting core */
+    --fh-white: #FFFFFF;
+    --fh-black: #0B0709;
+    --fh-red: #E50914;
+    --fh-red-deep: #A8070F;
+
+    /* accents - sparing, semantic only */
+    --fh-green: #158E5E;
+    --fh-purple: #6E43BE;
+
+    /* neutrals / surfaces */
+    --fh-paper: #FFFFFF;
+    --fh-paper-alt: #F7F2F4;
+    --fh-line: #E6D8DE;
+    --fh-ink: #1B1216;
+    --fh-ink-muted: #6E5B63;
+    --fh-ink-faint: #9C8A92;
+
+    /* shape + rhythm */
+    --fh-radius: 14px;
+    --fh-radius-sm: 10px;
+    --fh-shadow: 0 6px 18px rgba(11, 7, 9, .08);
+    --fh-shadow-hover: 0 12px 26px rgba(11, 7, 9, .16);
+    --fh-maxw: 960px;
+    --fh-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fh-font);
+    margin: 0;
+    padding: 0;
+    color: var(--fh-ink);
+    background: var(--fh-paper-alt);
+    text-align: center;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Cinematic hero ===== */
+.world-header {
+    background: linear-gradient(180deg, var(--fh-lotus-deep), var(--fh-lotus-dark));
+    color: var(--fh-white);
+    padding: 34px 18px 30px;
+}
+
+.world-header .logo {
+    width: 120px;
+    margin: 0 auto 12px;
+    display: block;
+    border-radius: 12px;
+    background: var(--fh-white);
+    padding: 6px;
+}
+
+.main-title {
+    color: var(--fh-white);
+    font-weight: 800;
+    font-size: clamp(28px, 6vw, 40px);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.tagline {
+    color: var(--fh-lotus-tint);
+    font-weight: 600;
+    font-size: clamp(15px, 2.8vw, 19px);
+    max-width: 720px;
+    margin: 10px auto 0;
+    padding: 0 4px;
+}
+
+/* ===== Zone picker ===== */
+.zone-section {
+    max-width: var(--fh-maxw);
+    margin: 0 auto;
+    padding: 26px 18px 8px;
+}
+
+h2 {
+    font-size: clamp(17px, 3vw, 21px);
+    color: var(--fh-lotus-deep);
+    font-weight: 800;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+}
+
+h3 {
+    font-size: 15px;
+    color: var(--fh-ink);
+    font-weight: 700;
+    margin: 10px 4px 4px;
+}
+
+.zone-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.zone-card {
+    width: 210px;
+    background: var(--fh-paper);
+    padding: 10px;
+    border-radius: var(--fh-radius);
+    border: 1px solid var(--fh-line);
+    box-shadow: var(--fh-shadow);
+    transition: transform .18s ease, box-shadow .18s ease,
+                border-color .18s ease;
+}
+
+.zone-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--fh-shadow-hover);
+    border-color: var(--fh-lotus);
+}
+
+.zone-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.zone-card img {
+    width: 100%;
+    height: 132px;
+    object-fit: cover;
+    border-radius: var(--fh-radius-sm);
+}
+
+/* ===== Social ===== */
+.social {
+    max-width: var(--fh-maxw);
+    margin: 28px auto 0;
+    padding: 0 18px;
+}
+
+.social .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.social .icons a {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--fh-white);
+    background: var(--fh-lotus);
+    transition: background .18s ease, transform .18s ease;
+}
+
+.social .icons a:hover {
+    background: var(--fh-lotus-deep);
+    transform: translateY(-1px);
+}
+
+.social .icons .fb { background: #1877F2; }
+.social .icons .yt { background: #FF0000; }
+.social .icons .ig {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+}
+
+footer {
+    margin-top: 30px;
+    padding: 22px 18px 30px;
+    font-size: 12px;
+    color: var(--fh-ink-faint);
+    background: var(--fh-white);
+    border-top: 1px solid var(--fh-line);
+}
+
+/* ===== Accessibility + responsive ===== */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--fh-lotus);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+@media (max-width: 480px) {
+    .zone-card {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+    }
+}
