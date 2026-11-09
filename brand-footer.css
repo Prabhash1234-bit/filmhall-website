@@ -1,0 +1,43 @@
+/* FilmHall brand footer: uses the colors of the page it sits on (home page or admin page, light or dark). */
+.bf {
+  --bf-bg: var(--fh-paper-alt, var(--bg, #F7F2F4));
+  --bf-card: var(--fh-paper, var(--card, #FFFFFF));
+  --bf-ink: var(--fh-ink, var(--ink, #1B1216));
+  --bf-muted: var(--fh-ink-muted, var(--mute, #6E5B63));
+  --bf-line: var(--fh-line, var(--line, #E6D8DE));
+  --bf-accent: var(--fh-lotus, var(--accent, #C21E56));
+  --bf-accent-deep: var(--fh-lotus-deep, var(--accent, #8E1440));
+  margin-top: 48px; background: var(--bf-bg); color: var(--bf-ink);
+  border-top: 1px solid var(--bf-line);
+  font-family: var(--fh-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif);
+  box-sizing: border-box; text-align: left;
+}
+.bf *, .bf *::before, .bf *::after { box-sizing: border-box; }
+.bf-inner { max-width: 960px; margin: 0 auto; padding: 48px 20px 28px; }
+.bf-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
+.bf h2 { margin: 0; font-size: 22px; line-height: 1.25; font-weight: 700; letter-spacing: .2px; text-transform: none; color: var(--bf-ink); }
+.bf h2::after { content: ""; display: block; width: 44px; height: 3px; margin-top: 12px; border-radius: 2px; background: var(--bf-accent); }
+.bf-lead { margin: 16px 0 18px; color: var(--bf-muted); font-size: 16px; line-height: 1.65; }
+.bf-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.bf-list li { display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: var(--bf-card); border: 1px solid var(--bf-line); border-radius: 12px; font-size: 15px; }
+.bf-ico { flex: none; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px; color: var(--bf-accent); background: rgba(194, 30, 86, .10); background: color-mix(in srgb, var(--bf-accent) 12%, transparent); }
+.bf-ico svg { width: 20px; height: 20px; }
+.bf-quote { margin: 16px 0 22px; padding: 0; font: italic 19px/1.65 Georgia, "Times New Roman", serif; color: var(--bf-ink); }
+.bf-quote::before { content: "\201C"; display: block; margin-bottom: 4px; font: normal 60px/.7 Georgia, serif; color: var(--bf-accent); }
+.bf-sign { display: flex; align-items: center; gap: 12px; }
+.bf-avatar { flex: none; width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; background: linear-gradient(135deg, var(--bf-accent), var(--bf-accent-deep)); font-weight: 700; letter-spacing: .5px; color: #fff; }
+.bf-sign strong { display: block; font-size: 16px; }
+.bf-sign .bf-role { color: var(--bf-muted); font-size: 14px; }
+.bf-bottom { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--bf-line); text-align: center; }
+.bf-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 0; margin: 0 0 14px; padding: 0; list-style: none; }
+.bf-links li + li::before { content: "\00B7"; margin: 0 12px; color: var(--bf-muted); }
+.bf-links a, .bf-links span { color: var(--bf-ink); font-size: 14px; text-decoration: none; }
+.bf-links a:hover { text-decoration: underline; }
+.bf a:focus-visible { outline: 2px solid var(--bf-accent); outline-offset: 3px; border-radius: 4px; }
+.bf-copy { margin: 0; color: var(--bf-muted); font-size: 13px; }
+.bf-admin { display: inline-block; margin-top: 12px; color: var(--bf-muted); font-size: 12px; text-decoration: none; opacity: .8; }
+.bf-admin:hover { opacity: 1; text-decoration: underline; }
+@media (max-width: 720px) {
+  .bf-cols { grid-template-columns: 1fr; gap: 36px; }
+  .bf-inner { padding: 40px 18px 24px; }
+}
