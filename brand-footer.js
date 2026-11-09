@@ -11,7 +11,7 @@
     partnerLead: "Are you a filmmaker, distributor, theatre owner or venue partner? Become part of a growing regional cinema network.",
     partners: ["Film producers and distributors", "Theatre and venue owners", "Regional business partners"],
     founderTitle: "A Message from the Founder",
-    quote: "Every region has stories worth telling. FilmHall aims to connect those stories with the audiences who cherish them.",
+    quote: "Every region has stories worth telling. FilmHall aims to connect those stories with the audiences who cherish them.SHOW YOUR FILMS TO YOUR PEOPLE, LANGUAGE REALLY MATTERS ,ITS AN EMOTION.",
     name: "Prabhash Barik",
     role: "Founder, FilmHall",
     rights: "All Rights Reserved"
